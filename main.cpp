@@ -17,6 +17,7 @@ int main()
     unsigned a = 1;
     unsigned z = 1000;
     unsigned los, podana = 0;
+    unsigned shot_couter = 0;
 
 //  system("color 17");
 
@@ -41,7 +42,7 @@ int main()
 
         cout << podana << endl; // ostatnio podana
 
-        cout << "\nPodaj liczbe z zakresu " << a << "-" << z << " " << endl;
+        cout << "\nPodaj liczbe z zakresu " << a << "-" << z << ". Strzal nr " << shot_couter << "." <<  endl;
 
         if ( podana < los)
         {
@@ -54,11 +55,16 @@ int main()
 
         black("\nPodaj: ");
         cin >> podana;
+        
+        shot_couter++;
+        
     }while ( podana != los );
 
     SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 
-    cout << "Brawo, zgadles myslalem o " << los << "." << endl;
+    cout << "Brawo, zgadles za " << shot_couter << " razem, myslalem o " << los << "." << endl;
+    
+    system("pause");
 
     SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED );
 
