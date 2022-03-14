@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+*vscode/
+main.dSYM/Contents/Info.plist
+main.dSYM/Contents/Resources/DWARF/main
+nul
+main
